@@ -1,1 +1,5 @@
 #+title: Galaga Clone
+
+
+* ideas
+** [ ] support 'throb' in invincible on hit script
