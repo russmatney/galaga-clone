@@ -29,13 +29,17 @@ public class PlayerController : MonoBehaviour
             Vector2 newPosition = transform.position;
             newPosition.x -= moveSpeed * Time.deltaTime;
             transform.position = newPosition;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 20));
         }
-
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D) )
+        else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D) )
         {
             Vector2 newPosition = transform.position;
             newPosition.x += moveSpeed * Time.deltaTime;
             transform.position = newPosition;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, -20));
+        }
+        else {
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         }
 
         if( Input.GetKey(KeyCode.Space) )
