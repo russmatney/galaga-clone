@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 1288170902680278720}
   - component: {fileID: 5151205880576541347}
   - component: {fileID: 853863524381442816}
+  - component: {fileID: 1745686033348242223}
   m_Layer: 0
-  m_Name: PlayerLaser
+  m_Name: PlayerLaserTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 687adaa44cdffc8cdbb67032b88d3885, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a85d53f757623a8cf92e5e0d8cf34e69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -197,6 +198,19 @@ MonoBehaviour:
   fireSound: {fileID: 8300000, guid: d9f16d999d9bcca09a82b0781f7c095c, type: 3}
   enemyDetector: {fileID: 8807463116904114504}
   target: {fileID: 0}
+--- !u!114 &1745686033348242223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6053941210475489250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eb0d96c2bf46371ea621074974bbd8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToDelete: 5
 --- !u!1 &8227352334178674792
 GameObject:
   m_ObjectHideFlags: 0
