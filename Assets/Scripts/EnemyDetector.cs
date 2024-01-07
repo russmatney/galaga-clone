@@ -17,7 +17,6 @@ public class EnemyDetector : MonoBehaviour
         //If it does, and it's not friendly
         if(damagable != null && damagable.faction == 0) // NOTE hardcoded to faction 0 for now
         {
-            Debug.Log("detected new enemy: " + obj);
             target = obj;
         }
     }
