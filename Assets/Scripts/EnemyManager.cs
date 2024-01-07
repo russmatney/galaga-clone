@@ -36,12 +36,10 @@ public class EnemyManager : MonoBehaviour
     }
 
     void SpawnEnemy() {
-        // TODO get random spawn point from list/children
         Vector3 pos = transform.position;
         pos.x += Random.Range(-spawnXRange/2, spawnXRange/2);
-        Debug.Log("enemy pos " + pos);
         GameObject new_enemy = Instantiate(enemyPrefab, pos, Quaternion.identity) as GameObject;
-        // TODO modify enemy ship and health to add variety
+        // TODO modify enemy ship sprite/health to add variety
         enemiesSpawned++;
     }
 }

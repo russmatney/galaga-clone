@@ -29,6 +29,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySound(AudioClip sound)
     {
+        Debug.Log("playing audio clip" + sound);
         audioSource.PlayOneShot(sound);
     }
 }
