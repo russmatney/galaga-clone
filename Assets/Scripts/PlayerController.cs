@@ -16,8 +16,8 @@ public class PlayerController : MonoBehaviour
     //A timestamp of the moment we last fired
     private float lastTimeFired;
 
-    private float ship_rotation_amt = 10;
-    private float bullet_rotation_amt = 0.5f;
+    public float ship_rotation_amt = 10;
+    public float bullet_rotation_amt = 0.4f;
 
     public void Awake()
     {
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
             Vector2 newPosition = transform.position;
             newPosition.x += moveSpeed * Time.deltaTime;
             transform.position = newPosition;
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, -rotation_amt));
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, -ship_rotation_amt));
         }
         else {
             transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
@@ -63,7 +63,6 @@ public class PlayerController : MonoBehaviour
             GameObject spawnedPrefab = Instantiate(projectilePrefab, spawnPoint.transform.position, Quaternion.identity) as GameObject;
             spawnedPrefab.transform.rotation = transform.rotation;
             var move_over_time = spawnedPrefab.GetComponent<MoveOverTime>();
-            var rotation_direction = transform.rotation.eulerAngles.normalized;
             if (transform.rotation.z == 0) {
                 // reset to original value
                 move_over_time.dir = move_over_time.direction.normalized;
