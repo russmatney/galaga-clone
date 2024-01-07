@@ -693,6 +693,7 @@ GameObject:
   - component: {fileID: 579661791}
   - component: {fileID: 579661796}
   - component: {fileID: 579661797}
+  - component: {fileID: 579661798}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -716,6 +717,8 @@ MonoBehaviour:
     type: 3}
   spawnPoint: {fileID: 495100651}
   moveSpeed: 3
+  ship_rotation_amt: 10
+  bullet_rotation_amt: 0.4
 --- !u!58 &579661792
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -847,8 +850,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57698000dc3590ea48bc321322f25007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invincibilityLength: 3
+  invincibilityLength: 5
   colorOnHit: {r: 1, g: 0.38679248, b: 0.38679248, a: 0.6156863}
+--- !u!95 &579661798
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579661790}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7949b424ee56b6acd861309ce837e576, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1263004894
 PrefabInstance:
   m_ObjectHideFlags: 0

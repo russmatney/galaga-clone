@@ -51,6 +51,8 @@ public class InvincibleOnHit : MonoBehaviour
         {
             //End the invincible
             InvincibleEnd();
+        // } else if (myCollider.enabled == false) {
+        //     InvinciblePulse();
         }
     }
 
@@ -66,8 +68,7 @@ public class InvincibleOnHit : MonoBehaviour
 
         if(spriteRenderer != null)
         {
-            Color newColor = colorOnHit;
-            spriteRenderer.color = newColor;
+            spriteRenderer.color = colorOnHit;
         }
     }
 
@@ -79,4 +80,9 @@ public class InvincibleOnHit : MonoBehaviour
             spriteRenderer.color = startColor;
         }
     }
+
+    // public void InvinciblePulse()
+    // {
+    //     spriteRenderer.color = colorOnHit;
+    // }
 }
